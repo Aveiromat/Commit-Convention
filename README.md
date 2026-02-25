@@ -29,32 +29,12 @@ git clone https://github.com/Aveiromat/Commit-Convention.git
 cp -r Commit-Convention/.githooks /caminho/para/seu/novo-projeto/
 ```
 
-### Passo 2: Configure o Git para usar a pasta `.githooks` ⚙️
+### Passo 2: Configure o projeto seguindo as instruções ⚙️
 
-No terminal, navegue até a raiz do seu novo projeto. O Git, por padrão, procura hooks na pasta oculta `.git/hooks`. Para podermos versionar nossos scripts no GitHub ou trazê-los via pasta de configuração, configuraremos o Git para olhar para a nova pasta `.githooks`:
+As instruções de como ativar o verificador no seu novo repositório (junto com a documentação de `feat`, `fix`, emojis, etc.) estão detalhadas dentro do README da própria pasta de configuração.
 
-```bash
-cd /caminho/para/seu/novo-projeto/
-git config core.hooksPath .githooks
-```
+👉 **[Ler as instruções e Regras de Commits](./.githooks/README.md)**
 
-### Passo 3: Garanta que o script tem permissão de execução ✅
-
-Para que o Git consiga executar o hook:
-
-```bash
-chmod +x .githooks/commit-msg
-```
-
-### Passo 4: Teste o hook de commit 💻
-
-Faça um commit de teste:
-
-```bash
-git add .
-git commit -m "feat: adicionar funcionalidade xyz"
-```
-
-Se a mensagem não possuir um emoji e um tipo válido (ex: `✨ feat: `), o terminal bloqueará o commit e exibirá as instruções corretas baseadas no `COMMIT_CONVENTION.md`.
+---
 
 > **Nota:** Commits automáticos de Merge (ex: `Merge branch...`) são ignorados para não impactar o fluxo de trabalho do Git.

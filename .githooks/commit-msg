@@ -25,7 +25,7 @@ PATTERN="^[^a-zA-Z0-9[:space:]]+ (feat|fix|docs|style|refactor|perf|test|build|c
 
 if [[ ! $COMMIT_MSG =~ $PATTERN ]]; then
   echo -e "${RED}ERRO: Mensagem de commit inválida!${NC}"
-  echo -e "A mensagem não segue o padrão do ${YELLOW}COMMIT_CONVENTION.md${NC}."
+  echo -e "A mensagem não segue o padrão do ${YELLOW}README.md${NC} (dentro da pasta .githooks)."
   echo ""
   echo -e "Padrão esperado: ${GREEN}<Emoji> <tipo>: <descrição>${NC}"
   echo -e "Exemplo válido: ${GREEN}✨ feat: adiciona nova funcionalidade de login${NC}"

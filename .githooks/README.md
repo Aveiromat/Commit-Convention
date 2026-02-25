@@ -1,4 +1,26 @@
-# Padrões de commits 📜
+# Padrões de commits e Validação 📜
+
+Este diretório (`.githooks`) contém os scripts de validação e a convenção de commits exigida.
+
+### ⚙️ Como configurar em seu projeto local
+
+Para que o seu Git passe a ler os hooks a partir desta pasta (em vez da pasta oculta `.git/hooks`) e bloqueie commits fora do padrão automagicamente, rode os seguintes comandos na raiz do seu repositório:
+
+1. Dê permissão de execução ao script:
+```bash
+chmod +x .githooks/commit-msg
+```
+
+2. Configure o Git para olhar para esta pasta:
+```bash
+git config core.hooksPath .githooks
+```
+
+A partir de agora, qualquer `git commit` será validado através das regras abaixo!
+
+---
+
+## Regras e Convenção de Commits
 
 De acordo com a documentação do **[Conventional Commits](https://www.conventionalcommits.org/pt-br)**, commits semânticos são uma convenção simples para ser utilizada nas mensagens de commit. Essa convenção define um conjunto de regras para criar um histórico de commit explícito, o que facilita a criação de ferramentas automatizadas.
 
