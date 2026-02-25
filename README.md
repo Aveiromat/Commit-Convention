@@ -10,6 +10,16 @@ Para conferir todas as regras, tipos de commits (feat, fix, chore, etc.), lista 
 
 👉 **[Ler as Regras de Commits (COMMIT_CONVENTION.md)](./.githooks/COMMIT_CONVENTION.md)**
 
+## 💡 Exemplos de Commits Válidos
+
+Antes do script permitir que um commit seja registrado na história do seu projeto, ele verifica a obrigatoriedade da estrutura: `<Emoji> <tipo>: <descrição>`. Abaixo estão alguns exemplos aceitos pelo script:
+
+- `✨ feat: adiciona tela de dashboard do usuário`
+- `🐛 fix: corrige erro de autenticação no login`
+- `♻️ refactor: melhora performance da listagem de itens`
+- `📚 docs: atualiza as instruções de configuração`
+- `🚀 deploy: publica versão v2.1.0 na produção`
+
 ---
 
 ## 🛠️ Como utilizar este repositório em OUTROS Projetos Novos
