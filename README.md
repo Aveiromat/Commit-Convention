@@ -1,18 +1,32 @@
-# 🛡️ Padrões de commits e Validador (Git Hook) 📜
+<div align="center">
+  
+# 🛡️ Padrões de Commits e Validador (Git Hook) 📜
 
-Este repositório é uma **ferramenta auxiliar** criada para ser utilizada em vários tipos de projetos. Ele contém:
-1. Um script `commit-msg` (Git Hook personalizado) para garantir que qualquer projeto siga estritamente o padrão de **Conventional Commits com Emojis**.
-2. A documentação completa das regras no arquivo `COMMIT_CONVENTION.md`.
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org/pt-br)
+[![Git Hook](https://img.shields.io/badge/Git-Hooks-F05032?logo=git)](https://git-scm.com/docs/githooks)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## 📖 Regras de Commits
+**Ferramenta auxiliar para padronização automática de commits em múltiplos projetos.**
 
-Para conferir todas as regras, tipos de commits (feat, fix, chore, etc.), lista de emojis e comandos úteis do Git, consulte o documento oficial:
+</div>
 
-👉 **[Ler as Regras de Commits (COMMIT_CONVENTION.md)](./.githooks/COMMIT_CONVENTION.md)**
+---
 
-## 💡 Exemplos de Commits Válidos
+## 🎯 Sobre o Projeto
 
-Antes do script permitir que um commit seja registrado na história do seu projeto, ele verifica a obrigatoriedade da estrutura: `<Emoji> <tipo>: <descrição>`. Abaixo estão alguns exemplos aceitos pelo script:
+Este repositório é uma **ferramenta auxiliar** criada para ser facilmente acoplada a outros projetos novos ou já existentes. O objetivo principal é automatizar e _forçar_ o padrão de **Conventional Commits com Emojis** através de um script de **Git Hook** (`commit-msg`).
+
+A estrutura contém:
+1. 🛡️ **Script `commit-msg`**: O "segurança" que valida as mensagens antes que o commit seja registrado no Git.
+2. 📖 **Regras e Convenções**: Toda a documentação organizada no arquivo `README.md` dentro da pasta de hooks.
+
+---
+
+## 💡 Como os commits devem ficar?
+
+Antes do script permitir que um commit seja salvo no seu projeto, ele verifica a obrigatoriedade da estrutura: `<Emoji> <tipo>: <descrição>`. 
+
+Abaixo estão alguns exemplos de **commits válidos** e aceitos:
 
 - `✨ feat: adiciona tela de dashboard do usuário`
 - `🐛 fix: corrige erro de autenticação no login`
@@ -22,29 +36,43 @@ Antes do script permitir que um commit seja registrado na história do seu proje
 
 ---
 
-## 🛠️ Como utilizar este repositório em OUTROS Projetos Novos
+## � Onde ler as Regras de Commits?
 
-Como este é um repositório auxiliar, o objetivo é levar a pasta `.githooks` para os seus novos projetos e configurá-lo para validar as mensagens de commit localmente.
+Para conferir todas as regras, tipos de commits (feat, fix, chore, etc.), lista de emojis e comandos úteis do Git, consulte a documentação oficial da ferramenta, contida na pasta `.githooks` deste repositório:
 
-### Passo 1: Obtenha os arquivos 📂
-
-Copie a pasta `.githooks` deste repositório para a raiz do seu novo projeto. Tudo que é necessário (script e documentação) está dentro dela.
-
-Por exemplo:
-```bash
-# Clone este repositório auxiliar em algum lugar
-git clone https://github.com/Aveiromat/Commit-Convention.git
-
-# Copie a pasta de hooks para a raiz do seu projeto novo
-cp -r Commit-Convention/.githooks /caminho/para/seu/novo-projeto/
-```
-
-### Passo 2: Configure o projeto seguindo as instruções ⚙️
-
-As instruções de como ativar o verificador no seu novo repositório (junto com a documentação de `feat`, `fix`, emojis, etc.) estão detalhadas dentro do README da própria pasta de configuração.
-
-👉 **[Ler as instruções e Regras de Commits](./.githooks/README.md)**
+👉 **[Acessar Regras de Commits e Emojis 📚](./.githooks/README.md)**
 
 ---
 
-> **Nota:** Commits automáticos de Merge (ex: `Merge branch...`) são ignorados para não impactar o fluxo de trabalho do Git.
+## 🚀 Como instalar em meus projetos?
+
+A instalação é **extremamente rápida** e foi desenhada no estilo _plug-and-play_. Você precisa apenas copiar a pasta de hooks deste repositório para o seu e rodar breves comandos.
+
+### 1️⃣ Obtenha a pasta `.githooks`
+
+Copie a pasta oculta chamada `.githooks` deste repositório para a **raiz** do seu novo projeto. Tudo o que é necessário (o script Bash e a documentação completa) já está dentro dela!
+
+```bash
+# Clone este repositório auxiliar em algum local temporário:
+git clone https://github.com/Aveiromat/Commit-Convention.git
+
+# Copie a pasta inteira para o seu projeto destino:
+# Substitua "/caminho/para/o/seu/projeto/" pelo caminho real da sua aplicação.
+cp -r Commit-Convention/.githooks /caminho/para/o/seu/projeto/
+```
+
+<br>
+
+### 2️⃣ Configure e Ative o Hook
+
+As instruções finais (super rápidas) de como configurar o seu Git local (dando as permissões pro script e mandando o Git ler a pasta) estão documentadas direto na fonte:
+
+👉 **[Ler os passos de ativação ⚙️](./.githooks/README.md)**
+
+---
+
+<br>
+
+<div align="center">
+  <small>💡 <b>Dica pro time:</b> Commits automáticos de Merge (ex: <code>Merge branch...</code>) são inteligentemente ignorados pelo nosso script para não quebrar o fluxo de trabalho natural dos pull requests!</small>
+</div>
